@@ -23,6 +23,29 @@ namespace Participation
         public MainWindow()
         {
             InitializeComponent();
+
+
+        }
+
+        private void Enter_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Vowels.Items.Clear();
+            Consonants.Items.Clear();
+            
+            foreach (char letter in UserInput.Text.ToLower())
+            {
+                if ((letter == 'a') || (letter == 'e') || (letter == 'i')|| (letter == 'o') || (letter == 'u'))
+                {
+                    Vowels.Items.Add(letter);
+                }
+                else
+                {
+                    Consonants.Items.Add(letter);
+                }
+            }
+
+            UserInput.Clear();
+
         }
     }
 }

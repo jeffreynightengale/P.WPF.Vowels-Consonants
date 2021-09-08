@@ -7,12 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="369*"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black"/>
                 <GradientStop Color="#FFDD1A1A" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
+        <TextBox x:Name="UserInput" HorizontalAlignment="Left" Margin="27,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" Height="40" Grid.ColumnSpan="2"/>
+        <Button x:Name="Enter_Button" Content="Enter" HorizontalAlignment="Left" Margin="136,102,0,0" VerticalAlignment="Top" Height="40" Width="62" Cursor="None" IsDefault="True" Grid.Column="1" Click="Enter_Button_Click"/>
+        <ListBox x:Name="Vowels" Margin="283,102,366,102" Grid.Column="1"/>
+        <ListBox x:Name="Consonants" Margin="440,102,204,102" Grid.Column="1"/>
+        <Label x:Name="EnterYourWord" Content="Please enter a word" HorizontalAlignment="Left" Margin="27,71,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="233" Background="#FFEAEAEA"/>
+        <Label x:Name="VowelsName" Content="Vowels" Grid.Column="1" HorizontalAlignment="Left" Margin="283,71,0,0" VerticalAlignment="Top" Height="31" Width="89" Background="#FFF4ECEC"/>
+        <Label x:Name="ConsonantsLabel" Content="Consonants" Grid.Column="1" HorizontalAlignment="Left" Margin="440,71,0,0" VerticalAlignment="Top" Height="31" Width="94" Background="#FFEADDDD"/>
 
     </Grid>
 </Window>
